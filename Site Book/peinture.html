@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Peintures</title>
+        <link rel="stylesheet" href="peinture.css">
+   </head>
+   <body>
+        <header>
+            <nav>
+                <a href="indexB.html">Accueil</a>
+            </nav>
+        </header>
+        <main>
+            <section class="oeuvres">
+                <h2>Mes Peintures</h2>
+                <div class="oeuvres-container">
+                    <div class="oeuvre-item">
+                        <img src="montagne.jpg.jpeg" alt="peinture1">
+                        <p>Peinture acrylique des calanques</p>
+                    </div>
+                    <div class="oeuvre-item">
+                        <img src="peinture bombe 2.jpg" alt="peinture2">
+                        <p>Peinture à la bombe de peinture</p>
+                    </div>
+                    <div class="oeuvre-item">
+                        <img src="fluid.jpeg" alt="dessin3">
+                        <p>Peinture utilisant le fluid art</p>
+                    </div>
+                    <div class="oeuvre-item">
+                        <img src="peinture bombe.jpg" alt="dessin4">
+                        <p>Peinture à la bombe de peinture</p>
+                    </div>    
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 Chloé Nieddu</p>
+        </footer>
+        <script>
+            const images = document.querySelectorAll('.oeuvre-item img');
+            const fullscreen= document.createElement('div');
+            fullscreen.classList.add('fullscreen-img');
+            document.body.appendChild(fullscreen);
+
+            images.forEach(image => {
+                image.addEventListener('click', () => {
+                    fullscreen.style.display= 'flex';
+                    const imgClone = document.createElement('img');
+                    imgClone.src = image.src;
+                    fullscreen.innerHTML = '';
+                    fullscreen.appendChild(imgClone);
+                });
+            });
+            fullscreen.addEventListener('click', () => {
+                fullscreen.style.display = 'none';
+            });
+        </script>
+   </body>
+</html>

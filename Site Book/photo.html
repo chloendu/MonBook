@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Photos</title>
+        <link rel="stylesheet" href="peinture.css">
+   </head>
+   <body>
+        <header>
+            <nav>
+                <a href="indexB.html">Accueil</a>
+            </nav>
+        </header>
+        <main>
+            <section class="oeuvres">
+                <h2>Mes Photos</h2>
+                <div class="oeuvres-container">
+                    <div class="oeuvre-item">
+                        <img src="photo1.jpg" alt="photo1">
+                        <p>Photo d'une feuille après la pluie</p>
+                    </div>
+                    <div class="oeuvre-item">
+                        <img src="IMG_4649.jpeg" alt="photo">
+                        <p>Photo du paysage au coucher du soleil</p>
+                    </div>
+                    <div class="oeuvre-item">
+                        <img src="IMG_0095.jpeg" alt="photo3">
+                        <p>Photo d'un paysage italien, Riomaggiore</p>
+                    </div>
+                    <div class="oeuvre-item">
+                        <img src="photo4.jpg" alt="photo4">
+                        <p>Photo de mon oeil</p>
+                    </div> 
+                    <div class="oeuvre-item">
+                        <img src="IMG_0104.jpeg" alt="photo5">
+                        <p>Photo d'une ruelle italienne, Vicolo della valle</p>
+                    </div>      
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 Chloé Nieddu</p>
+        </footer>
+        <script>
+            const images = document.querySelectorAll('.oeuvre-item img');
+            const fullscreen= document.createElement('div');
+            fullscreen.classList.add('fullscreen-img');
+            document.body.appendChild(fullscreen);
+
+            images.forEach(image => {
+                image.addEventListener('click', () => {
+                    fullscreen.style.display= 'flex';
+                    const imgClone = document.createElement('img');
+                    imgClone.src = image.src;
+                    fullscreen.innerHTML = '';
+                    fullscreen.appendChild(imgClone);
+                });
+            });
+            fullscreen.addEventListener('click', () => {
+                fullscreen.style.display = 'none';
+            });
+        </script>
+   </body>
+</html>

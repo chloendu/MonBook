@@ -1,0 +1,252 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+header{
+    background-color: #8c4f39;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+header h1{
+    font-size: 3rem;
+    margin: 0;
+    color: #fff;
+}
+
+header h1 span{
+    color: #f9d8b3;
+}
+
+header p{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.portfolio{
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.grid .item img{
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid .item img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about {
+    background-color: #d9c7b6;
+    padding: 3rem 1rem;
+}
+
+.about h2{
+    text-align: center;
+    color: #8c4f39;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.about-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text{
+    flex: 1;
+    max-width: 600px;
+}
+
+.about-text p{
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-image{
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+}
+
+.about-image img{
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+    border: 4px solid #8c4f39;
+    object-fit: cover;
+}
+
+.formation{
+    padding: 3rem 1rem;
+    background-color: #f9f5ee;
+    text-align: center;
+}
+
+.formation h2{
+    color: #8c4f39;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.formation-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.formation-item{
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+}
+
+.formation-item img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    border: 2px solid #8c4f39;
+}
+
+.formation-item h3{
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.formation-item p{
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+.creation{
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.creation h2{
+    color: #8c4f39;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.creation-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+.creation-item{
+    text-align: center;
+    flex: 1;
+    max-width: 300px;
+}
+
+.creation-item a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.creation-item img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s  ease;
+ 
+}
+.creation-item img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+
+.creation-item h3{
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem;
+    color: #8c4f39;
+}
+
+.creation-item p{
+    font-size: 1rem;
+    color: #555;
+}
+
+footer{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.evolution{
+    padding: 2rem;
+    text-align: center;
+}
+
+.evolution h2{
+    font-size: 2.5rem;
+    color: #8c4f39;
+    margin-bottom: 2rem;
+}
+
+.evolution-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.evolution-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.evolution-item div{
+    text-align: center;
+}
+
+.evolution-item img{
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.old h3, .new h3{
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #555;
+}

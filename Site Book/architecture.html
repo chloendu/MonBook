@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Réalisation 3D</title>
+        <link rel="stylesheet" href="peinture.css">
+   </head>
+   <body>
+        <header>
+            <nav>
+                <a href="indexB.html">Accueil</a>
+            </nav>
+        </header>
+        <main>
+            <section class="oeuvres">
+                <h2>Mes réalisations</h2>
+                <div class="oeuvres-container">
+                    <div class="oeuvre-item">
+                        <img src="perspective-cuisine.jpg" alt="archi1">
+                        <p>Dessin perspective d'une cuisine, réalisé pendant le stage</p>
+                    </div>
+                    <div class="oeuvre-item">
+                        <img src="maquette.jpg" alt="archi2">
+                        <p>Maquette réalisé en art plastiques, avec un autre camarade</p>
+                    </div>
+                    <div class="oeuvre-item">
+                        <img src="esquise1.jpg" alt="archi3">
+                        <p>Esquise d'un appartement</p>
+                    </div>
+                    <div class="oeuvre-item">
+                        <img src="espace.jpg" alt="archi4">
+                        <p>Conception numérique 3D de la maquette </p>
+                    </div>    
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 Chloé Nieddu</p>
+        </footer>
+        <script>
+            const images = document.querySelectorAll('.oeuvre-item img');
+            const fullscreen= document.createElement('div');
+            fullscreen.classList.add('fullscreen-img');
+            document.body.appendChild(fullscreen);
+
+            images.forEach(image => {
+                image.addEventListener('click', () => {
+                    fullscreen.style.display= 'flex';
+                    const imgClone = document.createElement('img');
+                    imgClone.src = image.src;
+                    fullscreen.innerHTML = '';
+                    fullscreen.appendChild(imgClone);
+                });
+            });
+            fullscreen.addEventListener('click', () => {
+                fullscreen.style.display = 'none';
+            });
+        </script>
+   </body>
+</html>
